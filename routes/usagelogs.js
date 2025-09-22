@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
   let energykWh = (BULB_WATTAGE * TOTAL_ON_TIME) / 1000;
   let totalCost = energykWh * COST_kWh;
 
-  return res.send(totalCost);
+  return res.send({ totalCost });
 });
 
 router.post("/", async (req, res) => {
